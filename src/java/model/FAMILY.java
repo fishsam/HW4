@@ -17,6 +17,14 @@ public class FAMILY {
         this.AGE = 0;
         this.GENDER = "";
     
+    /**
+     *
+     * @param ID
+     * @param NAME
+     * @param RELATION
+     * @param AGE
+     * @param GENDER
+     */
     public FAMILY(int ID, String NAME, String RELATION, int AGE, String GENDER) {
         this.ID = ID;
         this.NAME = NAME;
