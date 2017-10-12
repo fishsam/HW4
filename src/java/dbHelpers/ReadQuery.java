@@ -21,7 +21,7 @@ public class ReadQuery {
     public ReadQuery() {
     
 Properties props = new Properties(); //MWC
-InputStream instr = getClass().getResourceAsStream("dbconn.properties");
+InputStream instr = getClass().getResourceAsStream("dbConn.properties");
         try {
             props.load(instr);
         } catch (IOException ex) {
@@ -54,14 +54,14 @@ String passwd = props.getProperty("user.password");
         try {
             String query = "Select * from FAMILY";
             
-            PreparedStatement ps= conn.prepareStatement(query);
+            PreparedStatement ps = conn.prepareStatement(query);
             this.results = ps.executeQuery();
         } catch (SQLException ex) {
             Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
    }
     
-  public String getHTMLtable(){
+  public String getHTMLTable(){
    
       String table = "";
       table += "<table border=1>";
@@ -70,11 +70,11 @@ String passwd = props.getProperty("user.password");
             while(this.results.next()){
                 
                 FAMILY family = new FAMILY();
-                family.setID(this.results.getInt("id"));
-                family.setNAME(this.results.getString("name"));
-                family.setRELATION(this.results.getString("relation"));
-                family.setAGE(this.results.getInt("age"));
-                family.setGENDER(this.results.getString("gender"));
+                family.setID(this.results.getInt("ID"));
+                family.setNAME(this.results.getString("NAME"));
+                family.setRELATION(this.results.getString("RELATION"));
+                family.setAGE(this.results.getInt("AGE"));
+                family.setGENDER(this.results.getString("GENDER"));
                 
                 table += "<tr>";
                 table += "<td>";
@@ -101,7 +101,8 @@ String passwd = props.getProperty("user.password");
                 
                 table += "</tr>";
                  
-            } } catch (SQLException ex) {
+            }
+        } catch (SQLException ex) {
             Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
          
@@ -113,4 +114,6 @@ String passwd = props.getProperty("user.password");
       table += "</table>";
               return table;
 }
+
+    
 }
