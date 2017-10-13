@@ -10,7 +10,7 @@
         <h1>Add A Family Member</h1>
         
         <form name="addForm" action="addFamily" method="get">
-            
+            <link rel="stylesheet" type="text/css" href="READ.css">
             <label>Family Name:</label>
             <input type="text" name="NAME" value="" />
             <br>

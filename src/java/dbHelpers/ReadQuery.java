@@ -65,6 +65,15 @@ Class.forName(driver);
       String table = "";
       table += "<table border=1>";
       
+      table += "<tr>";
+      table += "<th>ID</th>";
+      table +="<th>NAME</th>";
+      table +="<th>RELATION</th>";
+      table +="<th>AGE</th>";
+      table +="<th>GENDER</th>";
+      table += "</tr>";
+      
+      
         try {
             while(this.results.next()){
                 

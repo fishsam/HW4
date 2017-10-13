@@ -30,10 +30,15 @@ tr:nth-child(even) {
 }
 
 th {
-    background-color: currentColor;
+    background-color: yellow;
     color: brown;
 }
 
 tr:nth-child(odd) {
-    background-color: darksalmon;
+    background-color: coral;
+    
+}
+
+body {
+    background-color: tan;
 }
