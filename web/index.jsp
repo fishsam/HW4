@@ -4,6 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>My Family</title>
+        <link rel="stylesheet" type="text/css" href="INDEX.css">
     </head>
     <body>
         <h1>My Family Database</h1>
