@@ -12,21 +12,18 @@
         <form name="addForm" action="addFamily" method="get">
             
             <label>Family Name:</label>
-            <input type="text" name="name" value="" />
+            <input type="text" name="NAME" value="" />
             <br>
-            
             <label>Relation:</label>
-            <input type="text" name="relation" value="" />
+            <input type="text" name="RELATION" value="" />
             <br>
-            
             <label>Age:</label>
-            <input type="text" name="age" value="" />
+            <input type="text" name="AGE" value="" />
             <br>
-            
             <label>Gender:</label>
-            <input type="text" name="gender" value="" />
+            <input type="text" name="GENDER" value="" />
             <br>
-            <input type="submit" name="submit" value="Submit"/>
+            <input type="submit" name="submit" value="Submit" />
         </form>
     </body>
 </html>
