@@ -41,7 +41,7 @@ public class AddForm extends HttpServlet {
             out.println("<title>Servlet AddForm</title>");            
             out.println("</head>");
             out.println("<body>");
-            
+            out.println("<h1> Servlet AddForm at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -77,7 +77,7 @@ public class AddForm extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        doPost (request, response);
+        
         
         String url = "/add.jsp";
         

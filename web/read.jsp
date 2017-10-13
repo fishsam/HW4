@@ -11,9 +11,11 @@
     
     <body>
         <h1>Sam's Family</h1>
+        
         <%= table %>
         
         <br><br>
+        
         <a href ="add">Add Family Member</a>
         
         
