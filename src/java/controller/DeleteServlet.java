@@ -84,7 +84,7 @@ public class DeleteServlet extends HttpServlet {
         //create a deleteQuery object
         DeleteQuery dq = new DeleteQuery();
         //use deleteQuery to delete the object
-        dq.doDelete("ID");
+        dq.doDelete(ID);
         //pass executuion on to the ReadServlet
         String url = "/read";
         
