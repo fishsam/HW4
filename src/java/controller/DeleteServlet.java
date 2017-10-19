@@ -80,7 +80,7 @@ public class DeleteServlet extends HttpServlet {
             throws ServletException, IOException {
        
         //get the ID
-        int friendID = Integer.parseInt(request.getParameter("ID"));
+        int ID = Integer.parseInt(request.getParameter("ID"));
         //create a deleteQuery object
         DeleteQuery dq = new DeleteQuery();
         //use deleteQuery to delete the object

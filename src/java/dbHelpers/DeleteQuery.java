@@ -47,7 +47,7 @@ Class.forName(driver);
        conn = DriverManager.getConnection(url, username, passwd);
     } catch (ClassNotFoundException | SQLException ex) {
     Logger.getLogger(DeleteQuery.class.getName()).log(Level.SEVERE, null, ex);
-        }  
+        }
         
     }
     
@@ -55,7 +55,7 @@ Class.forName(driver);
         
         try {
             //set up a string to hold our query
-            String query = "DELETE FROM family WHERE ID = ?";
+            String query = "DELETE FROM FAMILY WHERE ID = ?";
             
             //create a preparedstatement using our query string
             PreparedStatement ps = conn.prepareStatement(query);
