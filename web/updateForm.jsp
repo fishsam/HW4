@@ -17,7 +17,7 @@
             <table class="update">
                 <tr>
                     <td class="right">Family ID:</td>
-                    <td><input type="text" name="id" value="<%= family.getID() %>" /></td>
+                    <td><input type="text" name="id" value="<%= family.getID() %>" readonly/></td>
                 </tr>
                 <tr>
                     <td class="right">Family Name:</td>
