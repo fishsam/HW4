@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Fishman Family</title>
         <link rel="stylesheet" type="text/css" href="READ.css">
     </head>
     
@@ -17,6 +17,8 @@
         <br><br>
         
         <a href ="add">Add Family Member</a>
+        <br> <br>
+        <a href="search.jsp">Search Family</a>
         
         
     </body>

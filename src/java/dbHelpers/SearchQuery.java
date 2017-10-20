@@ -13,26 +13,25 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.FAMILY;
 
-public class ReadQuery {
-  
-    private Connection conn;
-    private ResultSet results;
+public class SearchQuery {
     
-    public ReadQuery() {
+ private Connection conn;
+ private ResultSet results;
     
-
+    public SearchQuery(){
+        
         try {
             Properties props = new Properties(); //MWC
 InputStream instr = getClass().getResourceAsStream("dbConn.properties");
             try {
             props.load(instr);
         } catch (IOException ex) {
-            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
         try {
             instr.close();
         } catch (IOException ex) {
-            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
 
 String driver = props.getProperty("driver.name");
@@ -42,25 +41,29 @@ String passwd = props.getProperty("user.password");
 Class.forName(driver);
        conn = DriverManager.getConnection(url, username, passwd);
     } catch (ClassNotFoundException | SQLException ex) {
-    Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
-        }
-}
-
-   public void doRead(){
+    Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
        
-       String query = "Select * from FAMILY ORDER BY ID ASC";
-       
-        try {
-            
-            
-            PreparedStatement ps = conn.prepareStatement(query);
-            this.results = ps.executeQuery();
-        } catch (SQLException ex) {
-            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
-        }
-   }
+    }
     
-  public String getHTMLTable(){
+    }
+    
+    
+    public void doSearch(String NAME){
+        
+     try {
+         String query = "SELECT * FROM family WHERE UPPER(NAME) LIKE ? ORDER BY ID ASC";
+         
+         PreparedStatement ps = conn.prepareStatement(query);
+         ps.setString(1, "%" + NAME.toUpperCase() + "%");
+         this.results = ps.executeQuery();
+     } catch (SQLException ex) {
+         Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
+     }
+        
+    }
+    
+    
+public String getHTMLTable(){
    
       String table = "";
       table += "<table border=1>";
@@ -114,7 +117,7 @@ Class.forName(driver);
                  
             }
         } catch (SQLException ex) {
-            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
          
         
@@ -126,5 +129,4 @@ Class.forName(driver);
               return table;
 }
 
-    
 }
