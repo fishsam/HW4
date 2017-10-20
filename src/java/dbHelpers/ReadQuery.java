@@ -106,8 +106,8 @@ Class.forName(driver);
                 table += "</td>";
                 
                 table += "<td>";
-                table += "<a href=delete?ID=" + family.getID() + "> Delete </a>";
-                      table += "</td>";  
+                table += "<a href=update?ID=" + family.getID() + "> Update </a>" + "<a href=delete?ID=" + family.getID() + "> Delete </a>";
+                table += "</td>";  
                 
                 
                 table += "</tr>";

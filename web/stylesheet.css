@@ -1,0 +1,11 @@
+
+body { background-color: lightblue; }
+
+table {border-collapse: collapse;}
+table, th, td { border: 1px solid black; }
+
+
+.right {text-align: right;}
+.add td {border: none; height:25px; padding:10px; font-weight: bold;}
+
+.update td {border: none; height:25px; padding:10px; font-weight: bold;}

@@ -23,6 +23,7 @@
             <label>Gender:</label>
             <input type="text" name="gender" value="" />
             <br>
+            <input type="reset" name="reset" value="Clear" />
             <input type="submit" name="submit" value="Submit" />
         </form>
     </body>
