@@ -10,6 +10,13 @@
         <title>Update A Family Member</title>
     </head>
     <body>
+        
+        <div class="wrap"> <!--div to hold all other divs -->
+
+            <%@ include file="includes/header.jsp" %>
+
+            <%@ include file="includes/menu.jsp" %> 
+        
         <h1>Update A Family Member Record</h1>
         
         <form name="updateForm" action="updateFamily" method="get">

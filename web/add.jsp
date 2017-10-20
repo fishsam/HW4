@@ -7,6 +7,13 @@
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
     </head>
     <body>
+        
+        <div class="wrap"> <!--div to hold all other divs -->
+
+            <%@ include file="includes/header.jsp" %>
+
+            <%@ include file="includes/menu.jsp" %> 
+        
         <h1>Add A Family Member</h1>
         
         <form name="addForm" action="addFamily" method="get">

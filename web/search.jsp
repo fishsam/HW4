@@ -7,6 +7,13 @@
         <title>Search Family</title>
     </head>
     <body>
+        
+        <div class="wrap"> <!--div to hold all other divs -->
+
+            <%@ include file="includes/header.jsp" %>
+
+            <%@ include file="includes/menu.jsp" %> 
+        
         <h1>Search Family</h1>
 
         <form name="searchForm" action="search" method="get">
